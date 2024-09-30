@@ -1,7 +1,7 @@
-import { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
+import { FastifyInstance } from "fastify";
 
 const dummyRoute = async (fastify: FastifyInstance) => {
-	fastify.get("/", async (req: FastifyRequest, res: FastifyReply) => {
+	fastify.get("/", async () => {
 		return { message: "Requested!" };
 	});
 };
