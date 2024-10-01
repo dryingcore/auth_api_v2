@@ -1,10 +1,12 @@
 import Fastify from "fastify";
 import connectToDB from "./src/database";
 import dummyRoute from "./src/routes/dummyRoute";
+import { registerRoute } from "./src/routes/registerRoute";
 
 const fastify = Fastify({ logger: true });
 
 fastify.register(dummyRoute);
+fastify.register(registerRoute);
 
 const start = async () => {
 	try {

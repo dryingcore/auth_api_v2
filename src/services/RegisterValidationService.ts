@@ -1,5 +1,5 @@
 import Joi, { ObjectSchema, ValidationResult } from "joi";
-import RegisterRequestBody from "../@types/RegisterRequestBody";
+import RegisterRequestBody from "@/types/RegisterRequestBody";
 
 export default class RegisterValidationService {
 	private schema: ObjectSchema;
