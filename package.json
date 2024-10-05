@@ -21,6 +21,7 @@
   "license": "ISC",
   "description": "Authentication API made with Fastify and TypeScript",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "fastify": "^5.0.0",
     "joi": "^17.13.3",
@@ -28,6 +29,7 @@
     "nodemon": "^3.1.7"
   },
   "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
     "@types/connect": "^3.4.38",
     "@types/jest": "^29.5.13",
     "@types/mongoose": "^5.11.96",
