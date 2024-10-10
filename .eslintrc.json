@@ -12,6 +12,7 @@
     "overrides": [
         {
             "files": [
+                "tests/**/*.{ts,tsx}",
                 "src/**/*.{ts,tsx}",
                 "server.ts"
             ],

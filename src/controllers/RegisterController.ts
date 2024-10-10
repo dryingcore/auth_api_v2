@@ -11,14 +11,12 @@ export default class RegisterController {
   public async registerUser(request: FastifyRequest, reply: FastifyReply) {
     try {
       const { name, email, password } = request.body as RegisterRequestBody;
-      const hashedPassword = await encryptPasswd(password);
-
       const { error } = this.validationService.validateUser({ name, email, password });
       if (error) return reply.code(400).send({ error: error.details[0].message });
 
-      if (await isAlreadyRegistered(email)) {
-        return reply.code(409).send({ error: "User already exists" });
-      }
+      const hashedPassword = await encryptPasswd(password);
+
+      if (await isAlreadyRegistered(email)) return reply.code(409).send({ error: "User already exists" });
 
       await saveUserToDB(name, email, hashedPassword);
       reply.code(201).send({ message: "User created successfully" });

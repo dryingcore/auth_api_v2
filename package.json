@@ -9,7 +9,7 @@
     "start": "nodemon build/server.js",
     "lint": "eslint 'src/**/*.{ts,tsx}' 'server.ts' 'jest.config.js'",
     "lint:fix": "eslint 'src/**/*.{ts,tsx}' 'server.ts' 'jest.config.js' --fix",
-    "format": "prettier --write 'src/**/*.{ts,tsx,json,css,md}' 'server.ts' 'jest.config.js'"
+    "format": "prettier --write '__tests__/*.{ts,tsx}' 'src/**/*.{ts,tsx,json,css,md}' 'server.ts' 'jest.config.js'"
   },
   "keywords": [
     "fastify",
